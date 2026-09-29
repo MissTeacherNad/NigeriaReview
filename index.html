@@ -7,12 +7,14 @@
   <title>Nigeria on the Move - Course Review</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23244F73'/%3E%3Cpath d='M14 45V19h8l20 26h8V19' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <style>
-    :root{--denim:#244f73;--blue:#5e89a5;--pale:#eaf2f6;--green:#198754;--green-pale:#edf8f2;--ink:#24343d;--muted:#63727b;--line:#cad7de;--orange:#d96b24;--white:#fff;--shadow:0 10px 28px rgba(22,52,72,.10)}
+    :root{--denim:#244f73;--blue:#5e89a5;--pale:#eaf2f6;--green:#198754;--green-pale:#edf8f2;--ink:#24343d;--muted:#63727b;--line:#cad7de;--orange:#d96b24;--white:#fff;--shadow:0 10px 28px rgba(22,52,72,.10);--wax-green:#17745b;--wax-gold:#e4aa2f;--wax-coral:#cb5838;--wax-indigo:#293c72}
     *{box-sizing:border-box} html{scroll-behavior:smooth}
     body{margin:0;background:#f4f7f9;color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}
     button,textarea{font:inherit} button{cursor:pointer}
     .app{max-width:980px;margin:auto;min-height:100vh;background:var(--white);box-shadow:var(--shadow)}
-    header{padding:26px 28px 20px;background:linear-gradient(120deg,var(--denim),#173a57);color:#fff}
+    header{position:relative;overflow:hidden;padding:34px 28px 20px;background:linear-gradient(120deg,var(--denim),#173a57);color:#fff}
+    .wax-band,footer::before{background-color:var(--wax-indigo);background-image:linear-gradient(45deg,transparent 38%,var(--wax-gold) 38% 50%,transparent 50% 88%,var(--wax-green) 88%),linear-gradient(-45deg,transparent 38%,var(--wax-coral) 38% 50%,transparent 50% 88%,var(--wax-gold) 88%);background-size:30px 16px}
+    .wax-band{position:absolute;left:0;right:0;top:0;height:8px}
     header p{margin:4px 0 0;color:#dbeaf3}.eyebrow{font-size:.82rem;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:#bcd4e3}
     h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.12;margin:5px 0}.meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:.91rem}
     .meta span{background:rgba(255,255,255,.11);padding:6px 10px;border:1px solid rgba(255,255,255,.25);border-radius:4px}
@@ -52,7 +54,7 @@
     .course-map{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.course-map article{border-top:5px solid var(--blue);background:var(--pale);padding:15px}.course-map h2{font-size:1.05rem;color:var(--denim);margin:0 0 8px}.course-map ul{padding-left:18px;margin:0}.course-map li{margin-bottom:5px}
     .guide-intro{border-left:5px solid var(--orange);background:#fff8f2;padding:13px 15px;margin-bottom:16px}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.guide-card{border:1px solid var(--line);border-radius:6px;padding:18px;background:#fff}.guide-card h2{margin:0 0 10px;color:var(--denim);font-size:1.14rem}.guide-card h3{margin:15px 0 6px;color:var(--blue);font-size:1rem}.guide-card p{margin:6px 0}.formula{background:var(--pale);color:var(--denim);font-weight:800;padding:10px 12px;margin:10px 0;border-radius:4px}.example{border-left:4px solid var(--green);padding:8px 11px;margin:8px 0;background:var(--green-pale)}.grammar-mark{color:#70429b;font-weight:900;background:#f2eafb;padding:1px 4px;border-radius:3px}.vocab-table{width:100%;border-collapse:collapse;margin-top:8px}.vocab-table th,.vocab-table td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.vocab-table th{color:var(--denim);background:var(--pale)}
     .input-answer{display:flex;gap:9px;align-items:stretch}.input-answer input{flex:1;min-width:0;border:1px solid var(--line);border-radius:5px;padding:13px 14px;font:inherit;color:var(--ink)}.input-answer input:focus{outline:3px solid rgba(94,137,165,.22);border-color:var(--blue)}.input-help{color:var(--muted);font-size:.9rem;margin-top:9px}
-    footer{padding:18px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    footer{position:relative;padding:26px 28px 18px;border-top:0;color:var(--muted);font-size:.84rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer::before{content:'';position:absolute;left:0;right:0;top:0;height:8px}
     .hidden{display:none!important}
     @media(max-width:720px){main,header{padding-left:18px;padding-right:18px}.module-grid,.writing-layout,.course-map,.guide-grid{grid-template-columns:1fr}.quiz-head{align-items:flex-start;flex-direction:column}.meta{gap:7px}.tab{flex:1 1 auto}.question{font-size:1.1rem}.input-answer{flex-direction:column}}
     @media print{body{background:#fff}.app{box-shadow:none}.tabs,.writing-actions,.intro,.module-grid,#quizPanel,footer{display:none!important}.panel{display:none!important}#writingPanel{display:block!important}.support-card{break-inside:avoid}textarea{border:1px solid #777;min-height:380px}header{background:#fff;color:var(--denim);padding:10px 0}header p,.eyebrow{color:var(--muted)}main{padding:10px 0}}
@@ -61,6 +63,7 @@
 <body>
 <div class="app">
   <header>
+    <div class="wax-band" aria-hidden="true"></div>
     <div class="eyebrow">Seconde · Lessons 1–3</div>
     <h1>Nigeria on the Move</h1>
     <p>Course review and guided writing</p>
