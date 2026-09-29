@@ -50,10 +50,11 @@
     .word-bank{display:flex;flex-wrap:wrap;gap:6px}.word-bank span{background:var(--pale);color:var(--denim);padding:5px 8px;border-radius:3px;font-size:.86rem;font-weight:700}
     .plan{margin:12px 0;padding-left:20px}.save-note{font-size:.83rem;color:var(--muted);margin-top:8px}.writing-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
     .course-map{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.course-map article{border-top:5px solid var(--blue);background:var(--pale);padding:15px}.course-map h2{font-size:1.05rem;color:var(--denim);margin:0 0 8px}.course-map ul{padding-left:18px;margin:0}.course-map li{margin-bottom:5px}
-    .guide-intro{border-left:5px solid var(--orange);background:#fff8f2;padding:13px 15px;margin-bottom:16px}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.guide-card{border:1px solid var(--line);border-radius:6px;padding:18px;background:#fff}.guide-card h2{margin:0 0 10px;color:var(--denim);font-size:1.14rem}.guide-card h3{margin:15px 0 6px;color:var(--blue);font-size:1rem}.guide-card p{margin:6px 0}.formula{background:var(--pale);color:var(--denim);font-weight:800;padding:10px 12px;margin:10px 0;border-radius:4px}.example{border-left:4px solid var(--green);padding:8px 11px;margin:8px 0;background:var(--green-pale)}.vocab-table{width:100%;border-collapse:collapse;margin-top:8px}.vocab-table th,.vocab-table td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.vocab-table th{color:var(--denim);background:var(--pale)}
+    .guide-intro{border-left:5px solid var(--orange);background:#fff8f2;padding:13px 15px;margin-bottom:16px}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.guide-card{border:1px solid var(--line);border-radius:6px;padding:18px;background:#fff}.guide-card h2{margin:0 0 10px;color:var(--denim);font-size:1.14rem}.guide-card h3{margin:15px 0 6px;color:var(--blue);font-size:1rem}.guide-card p{margin:6px 0}.formula{background:var(--pale);color:var(--denim);font-weight:800;padding:10px 12px;margin:10px 0;border-radius:4px}.example{border-left:4px solid var(--green);padding:8px 11px;margin:8px 0;background:var(--green-pale)}.grammar-mark{color:#70429b;font-weight:900;background:#f2eafb;padding:1px 4px;border-radius:3px}.vocab-table{width:100%;border-collapse:collapse;margin-top:8px}.vocab-table th,.vocab-table td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.vocab-table th{color:var(--denim);background:var(--pale)}
+    .input-answer{display:flex;gap:9px;align-items:stretch}.input-answer input{flex:1;min-width:0;border:1px solid var(--line);border-radius:5px;padding:13px 14px;font:inherit;color:var(--ink)}.input-answer input:focus{outline:3px solid rgba(94,137,165,.22);border-color:var(--blue)}.input-help{color:var(--muted);font-size:.9rem;margin-top:9px}
     footer{padding:18px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .hidden{display:none!important}
-    @media(max-width:720px){main,header{padding-left:18px;padding-right:18px}.module-grid,.writing-layout,.course-map,.guide-grid{grid-template-columns:1fr}.quiz-head{align-items:flex-start;flex-direction:column}.meta{gap:7px}.tab{flex:1 1 auto}.question{font-size:1.1rem}}
+    @media(max-width:720px){main,header{padding-left:18px;padding-right:18px}.module-grid,.writing-layout,.course-map,.guide-grid{grid-template-columns:1fr}.quiz-head{align-items:flex-start;flex-direction:column}.meta{gap:7px}.tab{flex:1 1 auto}.question{font-size:1.1rem}.input-answer{flex-direction:column}}
     @media print{body{background:#fff}.app{box-shadow:none}.tabs,.writing-actions,.intro,.module-grid,#quizPanel,footer{display:none!important}.panel{display:none!important}#writingPanel{display:block!important}.support-card{break-inside:avoid}textarea{border:1px solid #777;min-height:380px}header{background:#fff;color:var(--denim);padding:10px 0}header p,.eyebrow{color:var(--muted)}main{padding:10px 0}}
   </style>
 </head>
@@ -63,7 +64,7 @@
     <div class="eyebrow">Seconde · Lessons 1–3</div>
     <h1>Nigeria on the Move</h1>
     <p>Course review and guided writing</p>
-    <div class="meta"><span>6 themed modules</span><span>56 questions</span><span>Language guide</span><span>Progress saved</span></div>
+    <div class="meta"><span>7 themed modules</span><span>68 questions</span><span>Language guide</span><span>Progress saved</span></div>
   </header>
   <main>
     <section class="intro"><strong>Your mission</strong><p>Review every document studied in Lessons 1 to 3, then practise the vocabulary, useful phrases and grammar from the course. Read the explanation after every answer.</p></section>
@@ -88,33 +89,53 @@
     </section>
 
     <section id="guidePanel" class="panel">
-      <div class="guide-intro"><strong>Comment utiliser cette partie ?</strong><br>Relis les explications et les exemples avant de faire les modules « Vocabulary & Phrases » et « Grammar in Context ».</div>
+      <div class="guide-intro"><strong>Comment utiliser cette partie ?</strong><br>Relis les explications et les exemples avant de faire les modules « Vocabulary & Phrases », « Vocabulary Recall » et « Grammar in Context ».</div>
       <div class="guide-grid">
         <article class="guide-card">
           <h2>Present perfect</h2>
           <p>On l’utilise pour parler d’une évolution passée qui a un résultat visible dans le présent. On ne donne pas de date passée précise.</p>
-          <div class="formula">HAVE / HAS + participe passé</div>
-          <div class="example"><strong>Nollywood has reached new audiences.</strong><br>Nollywood a atteint de nouveaux publics et le résultat est encore vrai aujourd’hui.</div>
-          <div class="example"><strong>Streaming platforms have transformed distribution.</strong><br>Le sujet est pluriel, donc on emploie <em>have</em>.</div>
+          <div class="formula"><span class="grammar-mark">HAVE / HAS</span> + <span class="grammar-mark">participe passé</span></div>
+          <div class="example">Nollywood <span class="grammar-mark">has reached</span> new audiences.<br>Nollywood a atteint de nouveaux publics et le résultat est encore vrai aujourd’hui.</div>
+          <div class="example">Streaming platforms <span class="grammar-mark">have transformed</span> distribution.<br>Le sujet est pluriel, donc on emploie <em>have</em>.</div>
           <h3>À retenir</h3>
           <p><strong>I / you / we / they → have</strong><br><strong>he / she / it → has</strong></p>
         </article>
         <article class="guide-card">
           <h2>Passive voice</h2>
           <p>Le passif met l’accent sur l’action ou sur ce qui subit l’action. L’auteur de l’action peut être ajouté avec <em>by</em>, mais il n’est pas toujours nécessaire.</p>
-          <div class="formula">BE au temps voulu + participe passé</div>
-          <div class="example"><strong>Active:</strong> Designers use traditional fabrics.<br><strong>Passive:</strong> Traditional fabrics are used by designers.</div>
-          <div class="example"><strong>Nigerian films are distributed worldwide.</strong><br>Le sujet <em>films</em> est pluriel, donc on emploie <em>are</em>.</div>
+          <div class="formula"><span class="grammar-mark">BE au temps voulu</span> + <span class="grammar-mark">participe passé</span></div>
+          <h3>Passer de l’actif au passif</h3>
+          <p><strong>Active:</strong> Streaming platforms distribute Nigerian films.</p>
+          <p>1. Repère le complément d’objet : <strong>Nigerian films</strong>.<br>2. Place-le au début : il devient le sujet.<br>3. Conjugue <strong>BE</strong> au même temps que le verbe actif.<br>4. Ajoute le participe passé du verbe : <strong>distributed</strong>.<br>5. Ajoute <strong>by + agent</strong> seulement si cette information est utile.</p>
+          <div class="example"><strong>Passive:</strong> Nigerian films <span class="grammar-mark">are distributed</span> by streaming platforms.</div>
+          <h3>La même phrase à différents temps</h3>
+          <table class="vocab-table">
+            <tr><th>Temps</th><th>Actif</th><th>Passif</th></tr>
+            <tr><td>Present simple</td><td>Platforms <strong>distribute</strong> films.</td><td>Films <span class="grammar-mark">are distributed</span>.</td></tr>
+            <tr><td>Preterite</td><td>Platforms <strong>distributed</strong> films.</td><td>Films <span class="grammar-mark">were distributed</span>.</td></tr>
+            <tr><td>Present perfect</td><td>Platforms <strong>have distributed</strong> films.</td><td>Films <span class="grammar-mark">have been distributed</span>.</td></tr>
+            <tr><td>Future</td><td>Platforms <strong>will distribute</strong> films.</td><td>Films <span class="grammar-mark">will be distributed</span>.</td></tr>
+          </table>
+          <p><strong>À retenir :</strong> on conserve le même temps, mais on le construit sur <strong>BE</strong>. Le verbe principal reste au participe passé.</p>
           <h3>Present perfect passive</h3>
-          <div class="formula">HAVE / HAS + BEEN + participe passé</div>
-          <div class="example"><strong>Nigerian stories have been made accessible worldwide.</strong></div>
+          <div class="formula"><span class="grammar-mark">HAVE / HAS + BEEN</span> + <span class="grammar-mark">participe passé</span></div>
+          <div class="example">Nigerian stories <span class="grammar-mark">have been made</span> accessible worldwide.</div>
         </article>
         <article class="guide-card">
           <h2>Compound adjectives · Adjectifs composés</h2>
-          <p>Un adjectif composé réunit au moins deux mots pour qualifier un nom de façon précise. Placé avant le nom, il s’écrit généralement avec un trait d’union.</p>
-          <div class="formula">mot + mot → adjectif composé + nom</div>
-          <div class="example"><strong>a world-famous artist</strong> · un artiste mondialement célèbre<br><strong>a Nigerian-born singer</strong> · un chanteur né au Nigeria<br><strong>a Nollywood-produced series</strong> · une série produite par Nollywood<br><strong>hand-woven fabric</strong> · du tissu tissé à la main</div>
-          <p>Attention à ne pas confondre l’adjectif composé et le nom qu’il qualifie.</p>
+          <p>Un adjectif composé réunit au moins deux mots pour qualifier un nom de façon plus précise. Placé <strong>avant le nom</strong>, l’ensemble s’écrit généralement avec un trait d’union.</p>
+          <div class="formula">élément 1 + élément 2 → adjectif composé + nom</div>
+          <h3>1. Une forme en -ing exprime une action active</h3>
+          <p>Le nom qualifié accomplit l’action exprimée par le verbe.</p>
+          <div class="example"><span class="grammar-mark">life-saving</span> equipment = equipment which saves lives<br><span class="grammar-mark">long-lasting</span> influence = influence which lasts a long time</div>
+          <h3>2. Le participe passé exprime une action subie ou un résultat</h3>
+          <p>Le nom qualifié est né, produit, tissé, caché ou transformé d’une certaine manière.</p>
+          <div class="example"><span class="grammar-mark">Nigerian-born</span> singer = a singer who was born in Nigeria<br><span class="grammar-mark">Nollywood-produced</span> series = a series which was produced by Nollywood<br><span class="grammar-mark">hand-woven</span> fabric = fabric which was woven by hand<br><span class="grammar-mark">well-hidden</span> reference = a reference which is well hidden</div>
+          <h3>3. Un adjectif ou un nom peut préciser le sens</h3>
+          <div class="example"><span class="grammar-mark">world-famous</span> artist = an artist who is famous worldwide<br><span class="grammar-mark">high-tech</span> creation = a creation using advanced technology</div>
+          <h3>Le trait d’union</h3>
+          <p>Avant le nom : <strong>a world-famous artist</strong>.<br>Après le verbe <em>be</em>, certains groupes s’écrivent séparément : <strong>the artist is world famous</strong>.</p>
+          <p><strong>Méthode :</strong> repère le nom qualifié, cherche la relation entre les deux éléments, puis demande-toi si le sens est actif (<em>-ing</em>) ou passif/résultatif (participe passé).</p>
         </article>
         <article class="guide-card">
           <h2>Vocabulary & useful phrases</h2>
@@ -150,6 +171,7 @@
             <li id="checkCompound">One compound adjective</li>
             <li id="checkVocab">At least four key vocabulary items</li>
           </ul>
+          <p class="save-note">Automatic checklist: use it as a guide, then check your sentences carefully.</p>
           <h2>Suggested plan</h2>
           <ol class="plan"><li>State the main idea.</li><li>Give a first example.</li><li>Add a second example.</li><li>Explain the global impact.</li></ol>
           <h2>Useful words</h2>
@@ -172,74 +194,107 @@
 <script>
 const modules=[
  {id:'creative',title:'1 · Yemi Alade & Afrobeats',desc:'Lesson 1 documents · poster, video and class recap',questions:[
-  {q:'In the Yemi Alade poster, which details helped us describe a confident and culturally rooted image?',a:['Dark colours and an empty stage','Bright colours, patterned fabric, face paint and a powerful pose','A school uniform and books','A film camera and a city map'],c:1,e:'We observed bright orange and warm colours, patterned fabric, traditional-looking face paint, sophisticated styling and a confident pose.'},
-  {q:'Which three adjectives best match the image of Nigeria conveyed by the poster?',a:['Vibrant, creative and confident','Isolated, passive and old-fashioned','Silent, colourless and ordinary','Foreign, dependent and invisible'],c:0,e:'The visual choices present a vibrant, creative, confident and culturally rooted Nigeria.'},
-  {q:'What was the main topic of the Lesson 1 video?',a:['The origins and international development of Afrobeats','The production of a Netflix series','Traditional weaving in Lagos','An Afrofuturistic collage'],c:0,e:'The video introduced Afrobeats: its Nigerian/West African roots, contemporary sound, artists and worldwide audience.'},
-  {q:'How did the Afrobeats video echo the Yemi Alade poster?',a:['Both rejected modern culture.','Both combined cultural roots with contemporary creativity.','Both focused on American fashion.','Both presented Nigeria as isolated.'],c:1,e:'The two documents present a modern, confident identity that draws on Nigerian heritage and can travel beyond national borders.'},
-  {q:'What did the Paris concert mentioned on the poster suggest about Yemi Alade?',a:['Her work reaches audiences outside Nigeria.','She only performs locally.','She is mainly a fashion designer.','Her music has no connection with Nigeria.'],c:0,e:'The Paris concert showed that a Nigerian artist could reach an international audience.'},
-  {q:'How was the sound of Afrobeats presented in the video?',a:['As an energetic contemporary mix of African influences and modern sounds','As silent traditional music','As an American film genre','As music without any cultural roots'],c:0,e:'The video presented Afrobeats as energetic and contemporary, mixing African roots with modern musical influences.'},
-  {q:'Complete the class recap: Artists draw on their ___ while creating new forms.',a:['heritage','platform','distribution','perspective'],c:0,e:'Heritage is the culture, history and traditions inherited from earlier generations.'},
-  {q:'Which sentence best summarises Lesson 1?',a:['Today’s Nigerian culture is only traditional.','Today’s Nigerian culture is both rooted and contemporary, with a worldwide reach.','Afrobeats has remained local.','The poster and video give opposite images of Nigeria.'],c:1,e:'Our recap connected heritage, modern creativity, confidence and global reach.'}
+  {q:'In the Yemi Alade poster, which details helped us describe a confident and culturally rooted image?',a:['Soft neutral colours, casual clothes and a relaxed pose','Bright colours, patterned fabric, face paint and a powerful pose','Dark stage lighting, Western evening wear and a distant pose','Urban streetwear, muted colours and a natural pose'],c:1,e:'We observed bright orange and warm colours, patterned fabric, traditional-looking face paint, sophisticated styling and a confident pose.'},
+  {q:'Which three adjectives best match the image of Nigeria conveyed by the poster?',a:['Vibrant, creative and confident','Traditional, discreet and nostalgic','Modern, elegant and culturally neutral','International, fashionable and Westernised'],c:0,e:'The visual choices present a vibrant, creative, confident and culturally rooted Nigeria.'},
+  {q:'What was the main topic of the Lesson 1 video?',a:['The origins and international development of Afrobeats','The influence of Nigerian fashion on European designers','The development of Nollywood through streaming','The place of traditional art in futuristic collages'],c:0,e:'The video introduced Afrobeats: its Nigerian/West African roots, contemporary sound, artists and worldwide audience.'},
+  {q:'How did the Afrobeats video echo the Yemi Alade poster?',a:['Both showed that international success requires abandoning cultural roots.','Both combined cultural roots with contemporary creativity.','Both presented fashion as more influential than music.','Both focused mainly on the commercial side of Nigerian culture.'],c:1,e:'The two documents present a modern, confident identity that draws on Nigerian heritage and can travel beyond national borders.'},
+  {q:'What did the Paris concert mentioned on the poster suggest about Yemi Alade?',a:['Her work reaches audiences outside Nigeria.','Her international success depends mainly on European musical styles.','Her career is now centred exclusively on France.','Her audience is larger abroad than in Nigeria.'],c:0,e:'The Paris concert showed that a Nigerian artist could reach an international audience.'},
+  {q:'How was the sound of Afrobeats presented in the video?',a:['As an energetic contemporary mix of African influences and modern sounds','As a modern version of one unchanged traditional style','As a mainly American genre performed by Nigerian artists','As an international sound with few connections to local culture'],c:0,e:'The video presented Afrobeats as energetic and contemporary, mixing African roots with modern musical influences.'},
+  {q:'Complete the class recap: Artists draw on their ___ while creating new forms.',a:['heritage','international image','commercial success','global audience'],c:0,e:'Heritage is the culture, history and traditions inherited from earlier generations.'},
+  {q:'Which sentence best summarises Lesson 1?',a:['Nigerian artists preserve heritage by avoiding modern influences.','Today’s Nigerian culture is both rooted and contemporary, with a worldwide reach.','International success has made Nigerian culture less distinctive.','The poster presents cultural heritage, while the video focuses only on commercial success.'],c:1,e:'Our recap connected heritage, modern creativity, confidence and global reach.'}
  ]},
  {id:'fashion',title:'2 · Lagos Fashion Week & Chimamanda',desc:'Lesson 2 documents · design, identity, roots and self-expression',questions:[
-  {q:'What does Lagos Fashion Week showcase?',a:['Only European luxury brands','Nigerian and African designers','Nollywood actors only','Traditional clothes that never change'],c:1,e:'Lagos Fashion Week showcases Nigerian and African designers and gives contemporary African fashion greater visibility.'},
-  {q:'Which association is correct?',a:['Emmy Kasbit — Akwete hand-woven fabric','Emmy Kasbit — a Netflix series','Dóbale — a music platform','Fruché — an Afrobeats song'],c:0,e:'Emmy Kasbit uses Akwete, a hand-woven fabric, in contemporary fashion and African storytelling.'},
-  {q:'What cultural references were connected with Dóbale?',a:['Yoruba culture and indigo/adire inspiration','British school uniforms','Hollywood costumes','Only synthetic materials'],c:0,e:'Dóbale pays homage to Yoruba/Nigerian culture and transforms indigo or adire inspiration into contemporary design.'},
-  {q:'What did we note about Fruché?',a:['It rejects Nigerian heritage.','It draws on Nigerian heritage, adire and memories of family clothing.','It produces films for Netflix.','It is another name for Akwete.'],c:1,e:'Fruché combines Nigerian heritage, adire and family memories with contemporary design elements.'},
-  {q:'What common objective connects Emmy Kasbit, Dóbale and Fruché?',a:['Giving Nigerian culture new visibility through contemporary fashion','Replacing Nigerian materials with foreign ones','Producing identical collections','Separating fashion from cultural identity'],c:0,e:'The three creative projects transform Nigerian materials, memories or cultural references and give them new visibility.'},
-  {q:'What can clothes carry besides a visual style?',a:['Materials, memories, values and cultural identity','Only a commercial price','A film distribution system','No personal meaning'],c:0,e:'The lesson showed that clothes can carry materials, memories and values and can express cultural belonging.'},
-  {q:'What surprised Chimamanda when she arrived at university in America?',a:['Students wore very formal clothes.','Students dressed very casually, including flip-flops.','Nobody wore Western clothes.','Fashion was forbidden.'],c:1,e:'She was struck by the casual way students dressed, especially the idea of wearing flip-flops to school.'},
-  {q:'How did Chimamanda’s attitude to clothes change?',a:['She permanently abandoned her preferences.','She first adapted, then dressed more confidently and reconnected with her roots.','She stopped caring about identity.','She copied the three designers.'],c:1,e:'Fashion became a form of self-expression connected with identity, confidence, upbringing and cultural belonging.'}
+  {q:'What does Lagos Fashion Week showcase?',a:['International luxury brands adapted for Nigerian consumers','Nigerian and African designers','Traditional Nigerian clothing presented without modern changes','European designers inspired by African fashion'],c:1,e:'Lagos Fashion Week showcases Nigerian and African designers and gives contemporary African fashion greater visibility.'},
+  {q:'Which association is correct?',a:['Emmy Kasbit — Akwete hand-woven fabric','Dóbale — Akwete family weaving traditions','Fruché — exclusively Yoruba ceremonial clothing','Emmy Kasbit — indigo denim imported from Europe'],c:0,e:'Emmy Kasbit uses Akwete, a hand-woven fabric, in contemporary fashion and African storytelling.'},
+  {q:'What cultural references were connected with Dóbale?',a:['Yoruba culture and indigo/adire inspiration','Igbo weaving and Akwete inspiration','European tailoring and imported silk','Nollywood costumes and contemporary streetwear'],c:0,e:'Dóbale pays homage to Yoruba/Nigerian culture and transforms indigo or adire inspiration into contemporary design.'},
+  {q:'What did we note about Fruché?',a:['It reproduces traditional garments without changing them.','It draws on Nigerian heritage, adire and memories of family clothing.','It focuses on international trends rather than personal memories.','It uses Akwete to tell the same story as Emmy Kasbit.'],c:1,e:'Fruché combines Nigerian heritage, adire and family memories with contemporary design elements.'},
+  {q:'What common objective connects Emmy Kasbit, Dóbale and Fruché?',a:['Giving Nigerian culture new visibility through contemporary fashion','Preserving traditional garments without transforming them','Creating one shared Nigerian style for all designers','Prioritising international trends over local references'],c:0,e:'The three creative projects transform Nigerian materials, memories or cultural references and give them new visibility.'},
+  {q:'What can clothes carry besides a visual style?',a:['Materials, memories, values and cultural identity','A designer’s commercial strategy and nothing more','A fixed definition of national identity','Only the influence of current international trends'],c:0,e:'The lesson showed that clothes can carry materials, memories and values and can express cultural belonging.'},
+  {q:'What surprised Chimamanda when she arrived at university in America?',a:['Students dressed more formally than she expected.','Students dressed very casually, including flip-flops.','Students used clothes mainly to display cultural identity.','Students wore styles similar to those she knew in Nigeria.'],c:1,e:'She was struck by the casual way students dressed, especially the idea of wearing flip-flops to school.'},
+  {q:'How did Chimamanda’s attitude to clothes change?',a:['She continued adapting her style to avoid appearing different.','She first adapted, then dressed more confidently and reconnected with her roots.','She rejected both American fashion and her childhood influences.','She treated clothing as a professional image rather than self-expression.'],c:1,e:'Fashion became a form of self-expression connected with identity, confidence, upbringing and cultural belonging.'}
  ]},
  {id:'nollywood',title:'3 · Nollywood on Netflix',desc:'Lesson 3 document A · Far From Home, change and streaming',questions:[
-  {q:'What can we infer from the Far From Home poster?',a:['It is a historical documentary.','It is a youth drama set in an elite secondary school.','It is a fashion advert.','It is a music competition.'],c:1,e:'The young cast, school uniforms and Netflix branding suggest a youth drama for Nigerian and international teenage audiences.'},
-  {q:'What is Nollywood?',a:['Netflix’s African department','The Nigerian film industry','A Nigerian fashion label','A form of traditional music'],c:1,e:'Nollywood is the Nigerian film industry. Netflix is a distribution platform, not another name for Nollywood.'},
-  {q:'Before digital distribution developed, how were many Nollywood films produced and distributed?',a:['Only through global streaming','Quickly, on low budgets and mainly through local physical distribution','Only in Hollywood studios','Exclusively for schools'],c:1,e:'Many productions were made quickly on limited budgets and were mainly distributed locally in physical formats.'},
-  {q:'Which development helped Nollywood productions reach wider audiences?',a:['The end of Nigerian filmmaking','Digital distribution and partnerships with international streaming platforms','The invention of Afrobeats','Lagos Fashion Week'],c:1,e:'Digital distribution and partnerships with platforms such as Netflix helped productions circulate more widely.'},
-  {q:'What is one major result of streaming platforms for Nollywood today?',a:['Smaller local audiences','Worldwide audiences, greater visibility, investment and new opportunities','No work for writers or actors','Fewer Nigerian perspectives'],c:1,e:'Streaming has widened distribution and created opportunities for actors, writers, directors and producers.'},
-  {q:'Which creative professionals can benefit from Nollywood’s expansion?',a:['Actors, writers, directors and producers','Only foreign fashion designers','Only school pupils','No Nigerian professionals'],c:0,e:'The growth of production and distribution can create opportunities for actors, writers, directors and producers.'},
-  {q:'Which statement correctly distinguishes Nollywood from Netflix?',a:['Nollywood is the Nigerian film industry, while Netflix is one distribution platform.','Nollywood and Netflix are two names for the same company.','Netflix is the Nigerian film industry.','Nollywood is a type of streaming platform.'],c:0,e:'Nollywood names the Nigerian film industry. Netflix is one of the platforms that can distribute Nigerian productions.'},
-  {q:'What positive cultural impact did we identify?',a:['Nigerian stories disappeared.','Nigerian perspectives gained visibility and recognition.','All films became American.','Local audiences were excluded.'],c:1,e:'Nigerian productions have become accessible abroad, allowing Nigerian perspectives to gain recognition.'}
+  {q:'What can we infer from the Far From Home poster?',a:['It is a documentary about Nigerian schools.','It is a youth drama set in an elite secondary school.','It is a comedy about young musicians.','It is a crime series made mainly for adult viewers.'],c:1,e:'The young cast, school uniforms and Netflix branding suggest a youth drama for Nigerian and international teenage audiences.'},
+  {q:'What is Nollywood?',a:['Netflix’s catalogue of African films','The Nigerian film industry','A group of Nigerian film schools','Nigeria’s national streaming service'],c:1,e:'Nollywood is the Nigerian film industry. Netflix is a distribution platform, not another name for Nollywood.'},
+  {q:'Before digital distribution developed, how were many Nollywood films produced and distributed?',a:['With large international budgets and cinema releases','Quickly, on low budgets and mainly through local physical distribution','For television networks and audiences across Africa','Through online platforms but mainly for Nigerian viewers'],c:1,e:'Many productions were made quickly on limited budgets and were mainly distributed locally in physical formats.'},
+  {q:'Which development helped Nollywood productions reach wider audiences?',a:['Higher cinema ticket sales within Nigeria','Digital distribution and partnerships with international streaming platforms','More productions based on American stories','A move from films to television advertising'],c:1,e:'Digital distribution and partnerships with platforms such as Netflix helped productions circulate more widely.'},
+  {q:'What is one major result of streaming platforms for Nollywood today?',a:['A stronger focus on Nigerian audiences alone','Worldwide audiences, greater visibility, investment and new opportunities','More visibility but fewer professional opportunities','International distribution with less interest in Nigerian perspectives'],c:1,e:'Streaming has widened distribution and created opportunities for actors, writers, directors and producers.'},
+  {q:'Which creative professionals can benefit from Nollywood’s expansion?',a:['Actors, writers, directors and producers','Mainly actors and online influencers','Directors and producers, but not writers','International distributors rather than Nigerian professionals'],c:0,e:'The growth of production and distribution can create opportunities for actors, writers, directors and producers.'},
+  {q:'Which statement correctly distinguishes Nollywood from Netflix?',a:['Nollywood is the Nigerian film industry, while Netflix is one distribution platform.','Nollywood produces only films commissioned by Netflix.','Netflix is the international branch of the Nollywood industry.','Nollywood is a digital platform specialising in Nigerian films.'],c:0,e:'Nollywood names the Nigerian film industry. Netflix is one of the platforms that can distribute Nigerian productions.'},
+  {q:'What positive cultural impact did we identify?',a:['Nigerian stories were adapted to resemble American productions.','Nigerian perspectives gained visibility and recognition.','International viewers gained access, but local stories became less important.','Nigerian films became visible mainly because of their low budgets.'],c:1,e:'Nigerian productions have become accessible abroad, allowing Nigerian perspectives to gain recognition.'}
  ]},
  {id:'sounds',title:'4 · The Rise of Afrobeats',desc:'Lesson 3 document B · change, recognition and cultural pride',questions:[
-  {q:'What was the main idea of The Rise of Afrobeats?',a:['Nigerian music has stopped evolving.','Nigerian music and Afrobeats have reached the global stage.','Foreign music has disappeared.','The video was mainly about fashion.'],c:1,e:'The video traced the development of Nigerian music and the worldwide rise of Afrobeats.'},
-  {q:'Before the worldwide rise of Afrobeats, how was Nigerian music often perceived?',a:['It already dominated every market.','It received limited international attention and Western models were often considered “cooler”.','Nigerian artists refused to perform abroad.','It was more influential than it is today.'],c:1,e:'The course contrasted limited international attention and admiration for foreign models with later pride in Nigerian sounds.'},
-  {q:'What changed in Nigerian music?',a:['Artists abandoned their own sounds.','Artists developed, promoted and took pride in their own sounds.','Artists stopped using technology.','Music became less visible.'],c:1,e:'Nigerian artists developed and promoted their own sounds and asserted greater cultural pride.'},
-  {q:'What global impact did we identify?',a:['Afrobeats now reaches and influences global popular culture.','Afrobeats is only known in Lagos.','Nigerian artists have lost all recognition.','The music no longer changes.'],c:0,e:'Afrobeats has reached the world stage and now influences popular culture internationally.'},
-  {q:'According to Burna Boy, what cultural models seemed attractive to him as a child?',a:['Models associated with foreign countries','Only Nigerian films','Traditional fabrics only','No cultural models at all'],c:0,e:'He explained that, as a child, he often associated attractive or “cool” cultural models with foreign countries.'},
-  {q:'How has the success of Afrobeats affected cultural pride?',a:['It has encouraged pride in Nigerian sounds and creativity.','It has made Nigerian music invisible.','It has ended local music production.','It has encouraged artists to reject their origins.'],c:0,e:'The rise of Afrobeats has helped reverse earlier perceptions and reinforce pride in Nigerian cultural production.'},
-  {q:'What was the paradox explained by Burna Boy?',a:['Artists were first more strongly valued at home after gaining recognition abroad.','Foreign audiences never heard Nigerian music.','Nigerian artists preferred films to music.','Success abroad ended local pride.'],c:0,e:'For some artists, recognition abroad came before stronger recognition at home. Their international success helped reverse earlier perceptions.'},
-  {q:'How do Nollywood and Afrobeats complement each other?',a:['They circulate Nigerian stories and Nigerian sounds.','They are both fashion events.','They avoid digital platforms.','They give an old-fashioned image of Nigeria.'],c:0,e:'Together, Nigerian stories and sounds present the country as creative, modern and influential.'}
+  {q:'What was the main idea of The Rise of Afrobeats?',a:['Nigerian music has become more traditional as it has developed.','Nigerian music and Afrobeats have reached the global stage.','Foreign musical influences have replaced Nigerian sounds.','Afrobeats has grown mainly through success within Nigeria.'],c:1,e:'The video traced the development of Nigerian music and the worldwide rise of Afrobeats.'},
+  {q:'Before the worldwide rise of Afrobeats, how was Nigerian music often perceived?',a:['It was influential abroad but received little attention at home.','It received limited international attention and Western models were often considered “cooler”.','It was respected internationally but seen as old-fashioned in Nigeria.','It was commercially successful even though artists avoided foreign markets.'],c:1,e:'The course contrasted limited international attention and admiration for foreign models with later pride in Nigerian sounds.'},
+  {q:'What changed in Nigerian music?',a:['Artists adapted their music mainly to imitate foreign trends.','Artists developed, promoted and took pride in their own sounds.','Artists gained visibility but became less connected with local audiences.','Artists relied on international producers to define Afrobeats.'],c:1,e:'Nigerian artists developed and promoted their own sounds and asserted greater cultural pride.'},
+  {q:'What global impact did we identify?',a:['Afrobeats now reaches and influences global popular culture.','Afrobeats reaches international audiences but has little cultural influence.','International success has made Afrobeats less popular in Nigeria.','Afrobeats has become global mainly through film soundtracks.'],c:0,e:'Afrobeats has reached the world stage and now influences popular culture internationally.'},
+  {q:'According to Burna Boy, what cultural models seemed attractive to him as a child?',a:['Models associated with foreign countries','Models promoted by successful Nigerian musicians','Traditional and modern Nigerian models equally','Models connected mainly with Nigerian cinema'],c:0,e:'He explained that, as a child, he often associated attractive or “cool” cultural models with foreign countries.'},
+  {q:'How has the success of Afrobeats affected cultural pride?',a:['It has encouraged pride in Nigerian sounds and creativity.','It has encouraged pride mainly in artists who live abroad.','It has increased international success without changing local perceptions.','It has made foreign musical models even more influential in Nigeria.'],c:0,e:'The rise of Afrobeats has helped reverse earlier perceptions and reinforce pride in Nigerian cultural production.'},
+  {q:'What was the paradox explained by Burna Boy?',a:['Artists were first more strongly valued at home after gaining recognition abroad.','Artists were successful at home before international audiences noticed them.','Artists changed their musical identity to gain recognition abroad.','Artists gained recognition abroad but remained unknown in Nigeria.'],c:0,e:'For some artists, recognition abroad came before stronger recognition at home. Their international success helped reverse earlier perceptions.'},
+  {q:'How do Nollywood and Afrobeats complement each other?',a:['They circulate Nigerian stories and Nigerian sounds.','They promote the same artists through two different industries.','They depend on streaming platforms in exactly the same way.','They create international success while giving less space to local culture.'],c:0,e:'Together, Nigerian stories and sounds present the country as creative, modern and influential.'}
  ]},
  {id:'vocabulary',title:'5 · Vocabulary & Phrases',desc:'Words and expressions taken from the documents and class recaps',questions:[
-  {q:'Which phrase means “s’inspirer de son patrimoine” ?',a:['draw on one’s heritage','lose one’s audience','overlook one’s roots','produce a breakthrough'],c:0,e:'To draw on one’s heritage means to use inherited culture and traditions as a source of inspiration.'},
-  {q:'Complete: Lagos Fashion Week helps designers ___ their work.',a:['showcase','distribute by','reconnect an audience','gain a platform'],c:0,e:'To showcase work means to present it so that its qualities are noticed.'},
-  {q:'Which phrase means “renouer avec ses racines” ?',a:['go global','reconnect with one’s roots','reach a platform','be world-produced'],c:1,e:'Chimamanda reconnected with her roots through clothes, identity and self-expression.'},
-  {q:'Complete: Streaming platforms have helped Nigerian films ___ a wider audience.',a:['reach','draw','express','weave'],c:0,e:'Reach takes a direct object: reach an audience, without “to”.'},
-  {q:'What does “gain recognition” mean?',a:['Become acknowledged and respected','Remain unknown','Lose cultural identity','Return to local distribution'],c:0,e:'In The Rise of Afrobeats, international success helped artists gain recognition abroad and later at home.'},
-  {q:'Which pair is correctly matched?',a:['breakthrough — an important advance or success','worldwide — only local','influential — unknown','hand-woven — made by a streaming platform'],c:0,e:'A breakthrough is a major advance or success. Worldwide means global. Influential means having an impact. Hand-woven means woven by hand.'},
-  {q:'Complete: The designers ___ inspiration from Nigerian culture.',a:['draw','reach','gain','weave'],c:0,e:'To draw inspiration from something means to use it as a source of creative ideas.'},
-  {q:'Which expression best describes the designers’ work?',a:['They combine tradition with modernity.','They bring down their heritage.','They lose their cultural belonging.','They distribute their roots.'],c:0,e:'Emmy Kasbit, Dóbale and Fruché combine traditional materials or cultural references with contemporary design.'},
-  {q:'Complete: Chimamanda uses clothes to ___ herself.',a:['express','break through','distribute','overlook'],c:0,e:'To express oneself means to show one’s personality, ideas or identity.'},
-  {q:'Which phrase means “être fier de” ?',a:['be proud of','be reached by','be rooted from','be drawn at'],c:0,e:'To be proud of one’s culture means to value it positively and confidently.'},
-  {q:'Complete: Lagos Fashion Week has helped African fashion ___ international attention.',a:['attract','weave','reconnect','express'],c:0,e:'To attract international attention means to make people in other countries notice something.'},
-  {q:'Which phrase best describes Afrobeats today?',a:['It has reached the global stage.','It has lost every audience.','It has hidden its own sounds.','It has remained unknown worldwide.'],c:0,e:'To reach the global stage means to become visible and influential internationally.'}
+  {q:'Which phrase means “s’inspirer de son patrimoine” ?',a:['draw on one’s heritage','preserve one’s heritage','return to one’s origins','promote one’s cultural identity'],c:0,e:'To draw on one’s heritage means to use inherited culture and traditions as a source of inspiration.'},
+  {q:'Complete: Lagos Fashion Week helps designers ___ their work.',a:['showcase','promote to','represent with','display about'],c:0,e:'To showcase work means to present it so that its qualities are noticed.'},
+  {q:'Which phrase means “renouer avec ses racines” ?',a:['draw on one’s heritage','reconnect with one’s roots','express one’s cultural identity','return to one’s traditions'],c:1,e:'Chimamanda reconnected with her roots through clothes, identity and self-expression.'},
+  {q:'Complete: Streaming platforms have helped Nigerian films ___ a wider audience.',a:['reach','attract to','gain from','become'],c:0,e:'Reach takes a direct object: reach an audience, without “to”.'},
+  {q:'What does “gain recognition” mean?',a:['Become acknowledged and respected','Become commercially successful','Attract a larger audience','Receive international publicity'],c:0,e:'In The Rise of Afrobeats, international success helped artists gain recognition abroad and later at home.'},
+  {q:'Which pair is correctly matched?',a:['breakthrough — an important advance or success','worldwide — influential in one’s own country','influential — internationally famous','hand-woven — decorated by hand'],c:0,e:'A breakthrough is a major advance or success. Worldwide means global. Influential means having an impact. Hand-woven means woven by hand.'},
+  {q:'Complete: The designers ___ inspiration from Nigerian culture.',a:['draw','take on','gain','collect'],c:0,e:'To draw inspiration from something means to use it as a source of creative ideas.'},
+  {q:'Which expression best describes the designers’ work?',a:['They combine tradition with modernity.','They adapt tradition to international expectations.','They preserve tradition without transforming it.','They replace traditional references with modern ones.'],c:0,e:'Emmy Kasbit, Dóbale and Fruché combine traditional materials or cultural references with contemporary design.'},
+  {q:'Complete: Chimamanda uses clothes to ___ herself.',a:['express','represent','identify','showcase'],c:0,e:'To express oneself means to show one’s personality, ideas or identity.'},
+  {q:'Which phrase means “être fier de” ?',a:['be proud of','take pride from','feel confident with','be pleased for'],c:0,e:'To be proud of one’s culture means to value it positively and confidently.'},
+  {q:'Complete: Lagos Fashion Week has helped African fashion ___ international attention.',a:['attract','reach','gain','draw on'],c:0,e:'To attract international attention means to make people in other countries notice something.'},
+  {q:'Which phrase best describes Afrobeats today?',a:['It has reached the global stage.','It has attracted a global platform.','It has gained worldwide roots.','It has drawn on international recognition.'],c:0,e:'To reach the global stage means to become visible and influential internationally.'}
  ]},
- {id:'grammar',title:'6 · Grammar in Context',desc:'Present perfect, passive voice and compound adjectives',questions:[
-  {q:'Complete: Nigerian films ___ viewers around the world.',a:['has reached','have reached','have reach','are reached'],c:1,e:'Present perfect = have/has + past participle. “Films” is plural: have reached.'},
-  {q:'Complete: Afrobeats ___ the perception of African music.',a:['have changed','has changed','is change','has change'],c:1,e:'“Afrobeats” is singular here: has + changed.'},
-  {q:'Choose the correct passive sentence.',a:['Nigerian films are distributed by streaming platforms.','Nigerian films distribute by streaming platforms.','Streaming platforms are distribute Nigerian films.','Nigerian films is distributed by streaming platforms.'],c:0,e:'Present passive = am/is/are + past participle: films are distributed.'},
-  {q:'Transform into the passive: “Designers use traditional fabrics.”',a:['Traditional fabrics use designers.','Traditional fabrics are used by designers.','Traditional fabrics have use by designers.','Designers are used traditional fabrics.'],c:1,e:'The object becomes the subject: Traditional fabrics + are + used + by designers.'},
-  {q:'Which passive sentence accurately refers to the course?',a:['Akwete is hand-woven.','Akwete has hand-weave.','Akwete is weaving hands.','Akwete are hand-woven.'],c:0,e:'“Akwete” is singular: it is hand-woven. The passive highlights how the fabric is made.'},
-  {q:'Choose the correct present perfect passive form.',a:['Nigerian stories have been made accessible worldwide.','Nigerian stories have make accessible worldwide.','Nigerian stories are been accessible worldwide.','Nigerian stories has been make accessible worldwide.'],c:0,e:'Present perfect passive = have/has + been + past participle: have been made accessible.'},
-  {q:'Which compound adjective is correctly written before a noun?',a:['a world famous artist','a world-famous artist','a worldly-famous artist','a worldfamous artist'],c:1,e:'A compound adjective before a noun is normally hyphenated: a world-famous artist.'},
-  {q:'Which sentence combines our grammar and course content correctly?',a:['Nollywood-produced series have reached worldwide audiences.','Nollywood produced series has reach worldwide audiences.','Nollywood-produced series are reach worldwide audiences.','Nollywood producing series have reaching worldwide audiences.'],c:0,e:'“Nollywood-produced” is hyphenated, and the plural subject takes “have reached”.'},
-  {q:'Why do we use the present perfect in “Afrobeats has changed the perception of African music”?',a:['The change has a result in the present.','The sentence gives a finished date in 2012.','The action is happening only at this exact moment.','The sentence describes a future plan.'],c:0,e:'The present perfect connects a past development with its present result. No finished past date is given.'},
-  {q:'In a passive sentence, what becomes the grammatical subject?',a:['The person who speaks','The element that receives or undergoes the action','The date of the action','The auxiliary only'],c:1,e:'The passive foregrounds the receiver of the action. “Streaming platforms distribute films” becomes “Films are distributed by streaming platforms”.'},
-  {q:'Complete the present perfect passive: Nigerian productions ___ accessible to wider audiences.',a:['have been made','have made','are been made','has been make'],c:0,e:'Present perfect passive = have or has + been + past participle. “Productions” is plural, so we use “have been made”.'},
-  {q:'Which expression contains an adjective composed of two words?',a:['a hand-woven fabric','a cultural identity','an influential artist','a streaming platform'],c:0,e:'“Hand-woven” is a compound adjective placed before the noun “fabric”, so it is written with a hyphen.'}
+ {id:'vocab-recall',type:'input',title:'6 · Vocabulary Recall',desc:'Read the definition and type the matching word or phrase',questions:[
+  {q:'Traditions, history and culture passed down through generations.',accept:['heritage'],display:'heritage',e:'Heritage is what a community inherits from earlier generations.'},
+  {q:'To present something attractively so that people notice its qualities.',accept:['showcase','to showcase'],display:'showcase',e:'To showcase a work or culture means to present and highlight it.'},
+  {q:'To use your inherited culture and traditions as a source of inspiration.',accept:["draw on one's heritage","to draw on one's heritage",'draw on your heritage','draw on their heritage'],display:"draw on one’s heritage",e:'Artists can draw on their heritage while creating contemporary work.'},
+  {q:'To renew your connection with your culture or origins.',accept:["reconnect with one's roots","to reconnect with one's roots",'reconnect with your roots'],display:"reconnect with one’s roots",e:'Chimamanda used fashion to reconnect with her roots.'},
+  {q:'Made by weaving the material manually rather than by machine.',accept:['hand-woven','hand woven'],display:'hand-woven',e:'Akwete is a hand-woven fabric.'},
+  {q:'To become known, respected or acknowledged for your work.',accept:['gain recognition','to gain recognition'],display:'gain recognition',e:'International success helped Nigerian artists gain recognition.'},
+  {q:'To communicate successfully with the people for whom something is intended.',accept:['reach an audience','to reach an audience'],display:'reach an audience',e:'Digital platforms help films and music reach a wider audience.'},
+  {q:'To become successful or known internationally.',accept:['go global','to go global'],display:'go global',e:'Afrobeats has gone global and now reaches listeners worldwide.'},
+  {q:'An important discovery, development or success.',accept:['breakthrough','a breakthrough'],display:'breakthrough',e:'A breakthrough is a major advance or important success.'},
+  {q:'Having the power to affect people, ideas or developments.',accept:['influential'],display:'influential',e:'An influential artist has an important effect on audiences or other creators.'},
+  {q:'Available or happening in all parts of the world.',accept:['worldwide','global'],display:'worldwide',e:'Worldwide means international or global.'},
+  {q:'An online service used to watch or listen to digital content.',accept:['streaming platform','a streaming platform'],display:'streaming platform',e:'Netflix is a streaming platform, while Nollywood is a film industry.'}
+ ]},
+ {id:'grammar',title:'7 · Grammar in Context',desc:'Present perfect, passive voice and compound adjectives',questions:[
+  {q:'Complete: Nigerian films ___ viewers around the world.',a:['reached','have reached','are reaching','have been reached by'],c:1,e:'Present perfect = have/has + past participle. “Films” is plural: have reached.'},
+  {q:'Complete: Afrobeats ___ the perception of African music.',a:['changed','has changed','has been changed by','is changing'],c:1,e:'“Afrobeats” is singular here: has + changed.'},
+  {q:'Choose the correct passive sentence.',a:['Nigerian films are distributed by streaming platforms.','Nigerian films have distributed streaming platforms.','Streaming platforms are distributed through Nigerian films.','Nigerian films distribute through streaming platforms.'],c:0,e:'Present passive = am/is/are + past participle: films are distributed.'},
+  {q:'Transform into the passive: “Designers use traditional fabrics.”',a:['Traditional fabrics use contemporary designers.','Traditional fabrics are used by designers.','Traditional fabrics have used by designers.','Designers are using traditional fabrics.'],c:1,e:'The object becomes the subject: Traditional fabrics + are + used + by designers.'},
+  {q:'Which passive sentence accurately refers to the course?',a:['Akwete is hand-woven.','Akwete has woven by hand.','Akwete is weaving by hand.','Akwete has been weaving by hand.'],c:0,e:'“Akwete” is singular: it is hand-woven. The passive highlights how the fabric is made.'},
+  {q:'Choose the correct present perfect passive form.',a:['Nigerian stories have been made accessible worldwide.','Nigerian stories have made themselves accessible worldwide.','Nigerian stories were made accessible worldwide.','Nigerian stories are made accessible worldwide.'],c:0,e:'Present perfect passive = have/has + been + past participle: have been made accessible.'},
+  {q:'Which compound adjective is correctly written before a noun?',a:['a worldwide-famous artist','a world-famous artist','a world-famous-artist','a famous-world artist'],c:1,e:'A compound adjective before a noun is normally hyphenated: a world-famous artist.'},
+  {q:'Which sentence combines our grammar and course content correctly?',a:['Nollywood-produced series have reached worldwide audiences.','Nollywood-produced series reached worldwide audiences since their release.','Nollywood-producing series have been reached worldwide audiences.','Nollywood-produced series have been reached by worldwide audiences.'],c:0,e:'“Nollywood-produced” is hyphenated, and the plural subject takes “have reached”.'},
+  {q:'Why do we use the present perfect in “Afrobeats has changed the perception of African music”?',a:['The change has a result in the present.','The change happened at a stated and finished time.','The change is temporary and still in progress.','The change is presented as a future consequence.'],c:0,e:'The present perfect connects a past development with its present result. No finished past date is given.'},
+  {q:'In a passive sentence, what becomes the grammatical subject?',a:['The person responsible for the action','The element that receives or undergoes the action','The auxiliary that indicates the tense','The phrase introduced by “by”'],c:1,e:'The passive foregrounds the receiver of the action. “Streaming platforms distribute films” becomes “Films are distributed by streaming platforms”.'},
+  {q:'Complete the present perfect passive: Nigerian productions ___ accessible to wider audiences.',a:['have been made','have made themselves','were being made','are made'],c:0,e:'Present perfect passive = have or has + been + past participle. “Productions” is plural, so we use “have been made”.'},
+  {q:'Which expression contains an adjective composed of two words?',a:['a hand-woven fabric','a cultural-fashion identity','an internationally artist','a streaming-produced platform'],c:0,e:'“Hand-woven” is a compound adjective placed before the noun “fabric”, so it is written with a hyphen.'}
  ]}
 ];
+
+// Répartition stable et équilibrée des bonnes réponses dans chaque module.
+const positionPlans=[
+ [2,0,3,1,0,2,1,3],
+ [1,3,0,2,3,1,2,0],
+ [0,2,1,3,2,0,3,1],
+ [3,1,2,0,1,3,0,2],
+ [2,0,3,1,2,3,0,1,3,1,2,0],
+ null,
+ [1,3,0,2,1,0,3,2,0,2,1,3]
+];
+modules.forEach((module,moduleIndex)=>module.questions.forEach((item,questionIndex)=>{
+ if(module.type==='input')return;
+ const target=positionPlans[moduleIndex][questionIndex];
+ if(item.c!==target){
+  [item.a[item.c],item.a[target]]=[item.a[target],item.a[item.c]];
+  item.c=target;
+ }
+}));
 
 const state={module:null,index:0,score:0,wrong:[],answered:false,questions:[]};
 const saved=JSON.parse(localStorage.getItem('nigeriaReviewProgress')||'{}');
@@ -260,8 +315,21 @@ function renderQuestion(){
  document.getElementById('progress').style.width=`${(state.index/state.questions.length)*100}%`;
  document.getElementById('questionText').textContent=item.q;
  const answers=document.getElementById('answers');answers.innerHTML='';
- item.a.forEach((txt,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=txt;b.onclick=()=>choose(i,b);answers.appendChild(b)});
  document.getElementById('feedback').className='feedback';document.getElementById('feedback').innerHTML='';document.getElementById('nextBtn').classList.add('hidden');
+ if(state.module.type==='input'){
+  answers.innerHTML='<div class="input-answer"><input id="vocabInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Type the matching word or phrase" placeholder="Type the word or phrase in English"><button id="checkInput" class="primary">Check</button></div><div class="input-help">Majuscules, accents et apostrophes typographiques ne sont pas pris en compte.</div>';
+  const input=document.getElementById('vocabInput'),check=document.getElementById('checkInput');
+  check.onclick=()=>chooseInput(input,check);input.onkeydown=e=>{if(e.key==='Enter')chooseInput(input,check)};input.focus();return;
+ }
+ item.a.forEach((txt,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=txt;b.onclick=()=>choose(i,b);answers.appendChild(b)});
+}
+function normaliseAnswer(value){return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘`]/g,"'").replace(/[.!?]/g,'').replace(/\s+/g,' ').trim()}
+function chooseInput(input,check){
+ if(state.answered)return;const value=normaliseAnswer(input.value);if(!value){input.focus();return}
+ state.answered=true;const item=state.questions[state.index];const good=item.accept.some(answer=>normaliseAnswer(answer)===value);input.disabled=true;check.disabled=true;
+ if(good){state.score++}else{state.wrong.push(item)}
+ const feedback=document.getElementById('feedback');feedback.className=`feedback show ${good?'':'wrong'}`;feedback.innerHTML=good?`<strong>Correct.</strong> ${item.e}`:`<strong>Not quite.</strong> The expected answer is <strong>${item.display}</strong>. ${item.e}`;
+ document.getElementById('nextBtn').textContent=state.index===state.questions.length-1?'See my result':'Next question';document.getElementById('nextBtn').classList.remove('hidden');document.getElementById('progress').style.width=`${((state.index+1)/state.questions.length)*100}%`;
 }
 function choose(i,button){
  if(state.answered)return;state.answered=true;const item=state.questions[state.index];const buttons=[...document.querySelectorAll('.answer')];buttons.forEach(b=>b.disabled=true);buttons[item.c].classList.add('correct');
@@ -274,7 +342,7 @@ document.getElementById('nextBtn').onclick=()=>{state.index++;state.index<state.
 function showResult(){
  quizPanel.classList.add('hidden');resultPanel.classList.remove('hidden');const total=state.questions.length;const percent=Math.round(state.score/total*100);
  const previous=saved[state.module.id]?.score||0;saved[state.module.id]={score:Math.max(previous,state.score),total:state.module.questions.length};localStorage.setItem('nigeriaReviewProgress',JSON.stringify(saved));
- const review=state.wrong.length?`<div class="review-list"><strong>Ideas to review:</strong>${state.wrong.map(x=>`<div class="review-item">${x.q}<br><span style="color:var(--muted)">${x.e}</span></div>`).join('')}</div>`:'<p>Excellent — no errors in this module.</p>';
+ const review=state.wrong.length?`<div class="review-list"><strong>Ideas to review:</strong>${state.wrong.map(x=>`<div class="review-item">${x.q}${x.display?`<br><strong>Answer: ${x.display}</strong>`:''}<br><span style="color:var(--muted)">${x.e}</span></div>`).join('')}</div>`:'<p>Excellent — no errors in this module.</p>';
  resultPanel.innerHTML=`<div class="score-card"><div class="score-number">${state.score}/${total}</div><h2>${percent>=80?'Strong result':percent>=60?'Good start':'Keep reviewing'}</h2><p>The explanations matter as much as the score.</p>${review}<div class="writing-actions" style="justify-content:center"><button class="primary" onclick="renderModules()">Choose another module</button>${state.wrong.length?'<button class="secondary" id="retryWrong">Retry my mistakes</button>':''}</div></div>`;
  if(state.wrong.length)document.getElementById('retryWrong').onclick=()=>startModule(state.module.id,[...state.wrong]);
 }
@@ -287,9 +355,15 @@ const vocab=['heritage','identity','contemporary','showcase','roots','audience',
 function updateWriting(){
  const text=writing.value.trim();const words=text?text.split(/\s+/).filter(Boolean):[];document.getElementById('wordCount').textContent=words.length;document.getElementById('counter').classList.toggle('good',words.length>=80&&words.length<=100);
  const lower=text.toLowerCase();
- const examples=['yemi alade','afrobeats','lagos fashion week','chimamanda','emmy kasbit','dóbale','dobale','fruché','fruche','nollywood','far from home','rise of afrobeats'];let found=0;examples.forEach(x=>{if(lower.includes(x))found++});
- const perfect=/\b(has|have)\s+(reached|changed|transformed|contributed|become|gained|helped|drawn|combined|evolved|created|brought)\b/i.test(text);
- const passive=/\b(am|is|are|was|were|has been|have been)\s+(used|inspired|distributed|produced|shown|presented|made|woven|recognised|recognized)\b/i.test(text);
+ let found=0;
+ if(lower.includes('yemi alade'))found++;
+ if(['lagos fashion week','emmy kasbit','dóbale','dobale','fruché','fruche'].some(x=>lower.includes(x)))found++;
+ if(lower.includes('chimamanda'))found++;
+ if(lower.includes('nollywood')||lower.includes('far from home'))found++;
+ if(lower.includes('rise of afrobeats')||lower.includes('burna boy'))found++;
+ if(lower.includes('afrobeats')&&!lower.includes('rise of afrobeats')&&!lower.includes('burna boy'))found++;
+ const perfect=/\b(has|have)\s+(reached|changed|transformed|contributed|become|gained|helped|drawn|combined|evolved|created|brought|influenced|developed|promoted|grown|spread|shown|represented|used|made|taken|given|written|celebrated)\b/i.test(text);
+ const passive=/\b(am|is|are|was|were|has been|have been)\s+(used|inspired|distributed|produced|shown|presented|made|woven|recognised|recognized|celebrated|transformed|combined|promoted|created|influenced|represented|seen|heard)\b/i.test(text);
  const compound=/(world-famous|nigerian-born|nollywood-produced|life-changing)/i.test(text);
  const vocabCount=vocab.filter(x=>lower.includes(x)).length;
  document.getElementById('checkLength').classList.toggle('met',words.length>=80&&words.length<=100);document.getElementById('checkExamples').classList.toggle('met',found>=2);document.getElementById('checkPerfect').classList.toggle('met',perfect);document.getElementById('checkPassive').classList.toggle('met',passive);document.getElementById('checkCompound').classList.toggle('met',compound);document.getElementById('checkVocab').classList.toggle('met',vocabCount>=4);
