@@ -52,7 +52,8 @@
     .word-bank{display:flex;flex-wrap:wrap;gap:6px}.word-bank span{background:var(--pale);color:var(--denim);padding:5px 8px;border-radius:3px;font-size:.86rem;font-weight:700}
     .plan{margin:12px 0;padding-left:20px}.save-note{font-size:.83rem;color:var(--muted);margin-top:8px}.writing-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
     .course-map{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.course-map article{border-top:5px solid var(--blue);background:var(--pale);padding:15px}.course-map h2{font-size:1.05rem;color:var(--denim);margin:0 0 8px}.course-map ul{padding-left:18px;margin:0}.course-map li{margin-bottom:5px}
-    .guide-intro{border-left:5px solid var(--orange);background:#fff8f2;padding:13px 15px;margin-bottom:16px}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.guide-card{border:1px solid var(--line);border-radius:6px;padding:18px;background:#fff}.guide-card h2{margin:0 0 10px;color:var(--denim);font-size:1.14rem}.guide-card h3{margin:15px 0 6px;color:var(--blue);font-size:1rem}.guide-card p{margin:6px 0}.formula{background:var(--pale);color:var(--denim);font-weight:800;padding:10px 12px;margin:10px 0;border-radius:4px}.example{border-left:4px solid var(--green);padding:8px 11px;margin:8px 0;background:var(--green-pale)}.grammar-mark{color:#70429b;font-weight:900;background:#f2eafb;padding:1px 4px;border-radius:3px}.vocab-table{width:100%;border-collapse:collapse;margin-top:8px}.vocab-table th,.vocab-table td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.vocab-table th{color:var(--denim);background:var(--pale)}
+    .guide-intro{border-left:5px solid var(--orange);background:#fff8f2;padding:13px 15px;margin-bottom:16px}.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.guide-card{border:1px solid var(--line);border-radius:6px;padding:18px;background:#fff}.guide-card h2{margin:0 0 10px;color:var(--denim);font-size:1.14rem}.guide-card h3{margin:15px 0 6px;color:var(--blue);font-size:1rem}.guide-card p{margin:6px 0}.formula{background:var(--pale);color:var(--denim);font-weight:800;padding:10px 12px;margin:10px 0;border-radius:4px}.example{border-left:4px solid var(--green);padding:8px 11px;margin:8px 0;background:var(--green-pale)}.grammar-mark,.passive-verb{color:#70429b;font-weight:900;background:#f2eafb;padding:1px 4px;border-radius:3px}.active-subject{color:#244f73;font-weight:900;background:#e7f0f7;padding:1px 4px;border-radius:3px}.active-verb{color:#b34f18;font-weight:900;background:#fff0e6;padding:1px 4px;border-radius:3px}.active-object{color:#126c43;font-weight:900;background:#e8f6ee;padding:1px 4px;border-radius:3px}.vocab-table{width:100%;border-collapse:collapse;margin-top:8px}.vocab-table th,.vocab-table td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.vocab-table th{color:var(--denim);background:var(--pale)}.passive-table-wrap{overflow-x:auto;margin-top:8px;-webkit-overflow-scrolling:touch}.passive-table{min-width:850px;margin-top:0}.passive-table td,.passive-table th{white-space:nowrap}.colour-key{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0;font-size:.87rem}.colour-key span{display:inline-block}
+    .guide-card.passive-wide{grid-column:1/-1}
     .input-answer{display:flex;gap:9px;align-items:stretch}.input-answer input{flex:1;min-width:0;border:1px solid var(--line);border-radius:5px;padding:13px 14px;font:inherit;color:var(--ink)}.input-answer input:focus{outline:3px solid rgba(94,137,165,.22);border-color:var(--blue)}.input-help{color:var(--muted);font-size:.9rem;margin-top:9px}
     footer{position:relative;padding:30px 28px 18px;border-top:0;color:var(--muted);font-size:.84rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer::before{content:'';position:absolute;left:0;right:0;top:0;height:11px}
     .hidden{display:none!important}
@@ -103,22 +104,23 @@
           <h3>À retenir</h3>
           <p><strong>I / you / we / they → have</strong><br><strong>he / she / it → has</strong></p>
         </article>
-        <article class="guide-card">
+        <article class="guide-card passive-wide">
           <h2>Passive voice</h2>
           <p>Le passif met l’accent sur l’action ou sur ce qui subit l’action. L’auteur de l’action peut être ajouté avec <em>by</em>, mais il n’est pas toujours nécessaire.</p>
           <div class="formula"><span class="grammar-mark">BE au temps voulu</span> + <span class="grammar-mark">participe passé</span></div>
           <h3>Passer de l’actif au passif</h3>
-          <p><strong>Active:</strong> Streaming platforms distribute Nigerian films.</p>
+          <div class="colour-key"><span class="active-subject">Sujet</span><span class="active-verb">Verbe actif</span><span class="active-object">Complément d’objet</span><span class="passive-verb">Verbe passif</span></div>
+          <p><strong>Active:</strong> <span class="active-subject">Streaming platforms</span> <span class="active-verb">distribute</span> <span class="active-object">Nigerian films</span>.</p>
           <p>1. Repère le complément d’objet : <strong>Nigerian films</strong>.<br>2. Place-le au début : il devient le sujet.<br>3. Conjugue <strong>BE</strong> au même temps que le verbe actif.<br>4. Ajoute le participe passé du verbe : <strong>distributed</strong>.<br>5. Ajoute <strong>by + agent</strong> seulement si cette information est utile.</p>
-          <div class="example"><strong>Passive:</strong> Nigerian films <span class="grammar-mark">are distributed</span> by streaming platforms.</div>
+          <div class="example"><strong>Passive:</strong> <span class="active-object">Nigerian films</span> <span class="passive-verb">are distributed</span> by <span class="active-subject">streaming platforms</span>.</div>
           <h3>La même phrase à différents temps</h3>
-          <table class="vocab-table">
+          <div class="passive-table-wrap"><table class="vocab-table passive-table">
             <tr><th>Temps</th><th>Actif</th><th>Passif</th></tr>
-            <tr><td>Present simple</td><td>Platforms <strong>distribute</strong> films.</td><td>Films <span class="grammar-mark">are distributed</span>.</td></tr>
-            <tr><td>Preterite</td><td>Platforms <strong>distributed</strong> films.</td><td>Films <span class="grammar-mark">were distributed</span>.</td></tr>
-            <tr><td>Present perfect</td><td>Platforms <strong>have distributed</strong> films.</td><td>Films <span class="grammar-mark">have been distributed</span>.</td></tr>
-            <tr><td>Future</td><td>Platforms <strong>will distribute</strong> films.</td><td>Films <span class="grammar-mark">will be distributed</span>.</td></tr>
-          </table>
+            <tr><td>Present simple</td><td><span class="active-subject">Streaming platforms</span> <span class="active-verb">distribute</span> <span class="active-object">Nigerian films</span>.</td><td><span class="active-object">Nigerian films</span> <span class="passive-verb">are distributed</span> by <span class="active-subject">streaming platforms</span>.</td></tr>
+            <tr><td>Preterite</td><td><span class="active-subject">Streaming platforms</span> <span class="active-verb">distributed</span> <span class="active-object">Nigerian films</span>.</td><td><span class="active-object">Nigerian films</span> <span class="passive-verb">were distributed</span> by <span class="active-subject">streaming platforms</span>.</td></tr>
+            <tr><td>Present perfect</td><td><span class="active-subject">Streaming platforms</span> <span class="active-verb">have distributed</span> <span class="active-object">Nigerian films</span>.</td><td><span class="active-object">Nigerian films</span> <span class="passive-verb">have been distributed</span> by <span class="active-subject">streaming platforms</span>.</td></tr>
+            <tr><td>Future</td><td><span class="active-subject">Streaming platforms</span> <span class="active-verb">will distribute</span> <span class="active-object">Nigerian films</span>.</td><td><span class="active-object">Nigerian films</span> <span class="passive-verb">will be distributed</span> by <span class="active-subject">streaming platforms</span>.</td></tr>
+          </table></div>
           <p><strong>À retenir :</strong> on conserve le même temps, mais on le construit sur <strong>BE</strong>. Le verbe principal reste au participe passé.</p>
           <h3>Present perfect passive</h3>
           <div class="formula"><span class="grammar-mark">HAVE / HAS + BEEN</span> + <span class="grammar-mark">participe passé</span></div>
@@ -280,24 +282,36 @@ const modules=[
  ]}
 ];
 
-// Répartition stable et équilibrée des bonnes réponses dans chaque module.
-const positionPlans=[
- [2,0,3,1,0,2,1,3],
- [1,3,0,2,3,1,2,0],
- [0,2,1,3,2,0,3,1],
- [3,1,2,0,1,3,0,2],
- [2,0,3,1,2,3,0,1,3,1,2,0],
- null,
- [1,3,0,2,1,0,3,2,0,2,1,3]
-];
-modules.forEach((module,moduleIndex)=>module.questions.forEach((item,questionIndex)=>{
- if(module.type==='input')return;
- const target=positionPlans[moduleIndex][questionIndex];
- if(item.c!==target){
-  [item.a[item.c],item.a[target]]=[item.a[target],item.a[item.c]];
-  item.c=target;
+// À chaque nouvelle partie, les propositions sont redistribuées de façon
+// équilibrée. Le programme évite aussi, autant que possible, de replacer la
+// bonne réponse au même endroit que lors de la partie précédente.
+const lastAnswerPositions={};
+function shuffle(array){
+ for(let i=array.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[array[i],array[j]]=[array[j],array[i]]}
+ return array;
+}
+function balancedPositions(length,previous=[]){
+ const base=Array.from({length},(_,i)=>i%4);let best=shuffle([...base]),bestChanges=-1;
+ for(let attempt=0;attempt<80;attempt++){
+  const candidate=shuffle([...base]);
+  const changes=candidate.reduce((total,pos,i)=>total+(pos!==previous[i]?1:0),0);
+  if(changes>bestChanges){best=candidate;bestChanges=changes}
+  if(changes===length)break;
  }
-}));
+ return best;
+}
+function prepareQuestions(module,source){
+ if(module.type==='input')return source.map(item=>({...item,accept:[...item.accept]}));
+ const previous=source.map(item=>lastAnswerPositions[module.id]?.[item.q]);
+ const targets=balancedPositions(source.length,previous);
+ if(!lastAnswerPositions[module.id])lastAnswerPositions[module.id]={};
+ return source.map((item,index)=>{
+  const copy={...item,a:[...item.a]};const target=targets[index];
+  if(copy.c!==target){[copy.a[copy.c],copy.a[target]]=[copy.a[target],copy.a[copy.c]];copy.c=target}
+  lastAnswerPositions[module.id][item.q]=target;
+  return copy;
+ });
+}
 
 const state={module:null,index:0,score:0,wrong:[],answered:false,questions:[]};
 const saved=JSON.parse(localStorage.getItem('nigeriaReviewProgress')||'{}');
@@ -308,7 +322,7 @@ function renderModules(){
  moduleGrid.classList.remove('hidden');quizPanel.classList.add('hidden');resultPanel.classList.add('hidden');
 }
 function startModule(id,onlyWrong=null){
- state.module=modules.find(m=>m.id===id);state.questions=onlyWrong||state.module.questions;state.index=0;state.score=0;state.wrong=[];state.answered=false;
+ state.module=modules.find(m=>m.id===id);state.questions=prepareQuestions(state.module,onlyWrong||state.module.questions);state.index=0;state.score=0;state.wrong=[];state.answered=false;
  moduleGrid.classList.add('hidden');resultPanel.classList.add('hidden');quizPanel.classList.remove('hidden');renderQuestion();
 }
 function renderQuestion(){
